@@ -162,8 +162,8 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let randomNumber = Math.random()
-let computerChoice
+let randomNumber = Math.random();
+let computerChoice;
 if(randomNumber < 1/3){
   computerChoice = 'rock';
 }else if(randomNumber >= 1/3 && randomNumber <= 2/3){
@@ -174,8 +174,14 @@ if(randomNumber < 1/3){
 
 
 function game(user, computer){
-    if (user === computer){
-      return 'Its a tie';
+     /*if (user === computer){
+       return `it's a tie`; */
+     if (user === 'rock' && computer=== 'rock'){
+      return `it's a tie`;
+    }else if (user === 'paper' && computer=== 'paper'){
+      return `it's a tie`;
+    }else if (user === 'scissors' && computer=== 'scissors'){
+      return `it's a tie`;
     }else if (user==='rock' && computer==='paper'){
       return 'you lose!';
     }else if (user==='rock' && computer==='scissors'){
@@ -192,7 +198,7 @@ function game(user, computer){
 
   
 }
-  
+  User chooses rock
   console.log(game('rock',computerChoice))
   
 
@@ -208,7 +214,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilo){
-    return kilo * 0.6213
+    return kilo * 0.621371
   }
 console.log(miles(5))
 
@@ -222,7 +228,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-    return cm * 0.032
+    return cm / 30.48
   }
  console.log(feet(30))
 
@@ -237,9 +243,20 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(bottles){
-        /*add your code here*/
+function annoyingSong(startNum){
+  
+  for(let count = startNum;  count >= 1; count--){
+    return( `${count} bottles of soda on the wall, ${count} bottles of soda, take one down pass it around ${count - 1} bottles of soda on the wall`)
   }
+}
+console.log(annoyingSong(5))
+
+
+
+
+  
+       
+  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
