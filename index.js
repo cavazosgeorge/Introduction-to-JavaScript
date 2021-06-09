@@ -243,13 +243,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(startNum){
-  
-  for(let count = startNum;  count >= 1; count--){
-    return( `${count} bottles of soda on the wall, ${count} bottles of soda, take one down pass it around ${count - 1} bottles of soda on the wall`)
-  }
+function annoyingSong(start){
+  for(let i = start; i > 0; i--)
+  return(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`);
 }
-console.log(annoyingSong(5))
+
+annoyingSong(68)
+
 
 
 
@@ -273,21 +273,20 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(grade){
-  if (grade >=90){
-    return 'You got an A';
-  }else if (grade >=80 && grade <=89){
-    return 'You got a B';
-  }else if (grade >=70 && grade <=79){
-    return 'You got a C';
-  }else if (grade >=60 && grade <= 69){
-    return 'You got a D';
-  }else if (grade <60){
-    return 'You got an F'
+function grade(score){
+  if (score >= 90) {
+    return 'you got an A';
+  } else if (score >= 80) {
+    return 'you got a B';
+  } else if (score >= 70) {
+    return 'you got a C';
+  } else if (score >= 60) {
+    return 'you got a D';
+  } else {
+    return 'you got an F';
   }
-  
 }
-  console.log(grade(70))
+  
   
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
